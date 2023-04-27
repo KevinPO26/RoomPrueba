@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mostrarFragment">
+
+    <fragment
+        android:id="@+id/mostrarFragment"
+        android:name="com.example.roomtest.MostrarFragment"
+        android:label="fragment_mostrar"
+        tools:layout="@layout/fragment_mostrar" >
+        <action
+            android:id="@+id/action_mostrarFragment_to_agregarFragment"
+            app:destination="@id/agregarFragment" />
+        <action
+            android:id="@+id/action_mostrarFragment_to_editarFragment"
+            app:destination="@id/editarFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="apellido"
+            app:argType="string" />
+        <argument
+            android:name="carrera"
+            app:argType="string" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarFragment"
+        android:name="com.example.roomtest.AgregarFragment"
+        android:label="fragment_agregar"
+        tools:layout="@layout/fragment_agregar" />
+    <fragment
+        android:id="@+id/editarFragment"
+        android:name="com.example.roomtest.EditarFragment"
+        android:label="fragment_editar"
+        tools:layout="@layout/fragment_editar" />
+</navigation>
